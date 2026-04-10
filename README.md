@@ -1,5 +1,3 @@
-# studenttask-planner
-This is my 1st group project
-<br>
-by Ashish Kumar
+# Study Task Planner
 
+This is our group project for managing tasks.
