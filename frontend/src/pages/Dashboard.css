@@ -1,0 +1,81 @@
+/* Layout */
+.container {
+  display: flex;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 220px;
+  background: #1e293b;
+  color: white;
+  padding: 20px;
+}
+
+.sidebar h2 {
+  margin-bottom: 20px;
+}
+
+.sidebar p {
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+/* Main Content */
+.main {
+  flex: 1;
+  padding: 30px;
+  background: #f8fafc;
+}
+
+/* Input section */
+.input-section {
+  margin-bottom: 20px;
+}
+
+.input-section input {
+  padding: 8px;
+  width: 250px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.input-section button {
+  padding: 8px 12px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Task list */
+.task-item {
+  background: white;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.task-left {
+  display: flex;
+  align-items: center;
+}
+
+.task-left span {
+  margin-left: 10px;
+}
+
+.delete-btn {
+  background: #ef4444;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
