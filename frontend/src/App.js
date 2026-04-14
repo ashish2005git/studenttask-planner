@@ -1,15 +1,31 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Dashboard from "./pages/Dashboard";
+// src/components/Dashboard.js
+import React from 'react';
+import './Dashboard.css';
 
-function App() {
+const Dashboard = ({ tasks }) => {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<h1>Home Page</h1>} />
-        <Route path="/dashboard" element={<Dashboard />} />
-      </Routes>
-    </Router>
+    <div className="dashboard-container">
+      <header className="ux-header">
+        <h1>My Study Planner</h1>
+        <p>You have {tasks.length} tasks remaining for today.</p>
+      </header>
+      
+      <div className="task-grid">
+        {tasks.map(task => (
+          <div key={task.id} className={`task-card priority-${task.priority}`}>
+            <div className="task-content">
+              <h3>{task.title}</h3>
+              <p>{task.description}</p>
+            </div>
+            <div className="task-actions">
+              <button className="btn-complete">Check</button>
+              <button className="btn-delete">Delete</button>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
   );
-}
+};
 
-export default App;
+export default Dashboard;
